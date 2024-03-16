@@ -19,5 +19,8 @@ sony-leo-old.dts
 Same as above, but for the Z3 (sony-leo).  
 Only the last part is different.  
   
+sony-aries-ml6.8.dts and sony-leo-ml6.8.dts  
+These are concatenated .dts files, like the above two, but they are from the [(close to) current mainline kernel](https://github.com/TheOrangeCat/linux/tree/qcom-msm8974-6.8-wip-aries).
+  
 ## License
 For exact license information, please look at the given sources.
