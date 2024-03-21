@@ -1,0 +1,19 @@
+&mdss_dsi0 {
+	panel@0 {
+		compatible = "novatek,lgd";
+		reg = <0>;
+
+		backlight = <&backlight>;
+
+		port {
+			panel_in: endpoint {
+				remote-endpoint = <&mdss_dsi0_out>;
+			};
+		};
+	};
+};
+
+&mdss_dsi0_out {
+	data-lanes = <0 1 2 3>;
+	remote-endpoint = <&panel_in>;
+};

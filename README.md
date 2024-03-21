@@ -21,6 +21,29 @@ Only the last part is different.
   
 sony-aries-ml6.8.dts and sony-leo-ml6.8.dts  
 These are concatenated .dts files, like the above two, but they are from the [(close to) current mainline kernel](https://github.com/TheOrangeCat/linux/tree/qcom-msm8974-6.8-wip-aries).
+
+generated_dsi_files folder  
+These are the panel files from the old repo.  
+I took a panel-xxx.dtsi, edited it and used the [linux-mdss-dsi-panel-driver-generator](https://github.com/msm8916-mainline/linux-mdss-dsi-panel-driver-generator).  
+dtc -I dts -O dtb -o panel-xxx.dtb panel-xxx.dtsi  
+./lmdpdg.py --dumb-dcs panel-xxx.dtb  
+NOTE that you need to install [libfdt](https://pypi.org/project/pylibfdt/).  
+(My debian package for libfdt is too old...)  
+Inside a folder you can find a modified .dtsi file, a from this file compiled .dtb file,  
+and from the .dtb file compiled driver files. (may be multiple folders)  
+  
+I got errors for the following .dtsi files:  
+dsi-panel-castor  
+dsi-panel-orise-720p-video  
+dsi-panel-sim-video  
+dsi-v2-panel-hx8379a-wvga-video  
+dsi-v2-panel-nt35590-720p-video  
+dsi-v2-panel-otm8018b-fwvga-video  
+dsi-v2-panel-truly-wvga-cmd  
+dsi-v2-panel-truly-wvga-video  
+  
+Right now, these driver files are raw, they need license, comment and other info adjustments.  
+They haven't been tested!  
   
 ## License
 For exact license information, please look at the given sources.
