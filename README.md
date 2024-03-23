@@ -45,5 +45,48 @@ dsi-v2-panel-truly-wvga-video
 Right now, these driver files are raw, they need license, comment and other info adjustments.  
 They haven't been tested!  
   
+# What works and what doesn't in mainline  
+Buttons - tested with evtest, no action set for the events  
+  
+eMMC internal storage - works  
+SD-Card - works  
+  
+Display  
+  * Screen - does not work  
+    * DSI bus  
+    * Panel  
+  * Touchpad - on my phone this is broken, so I can't test it.  
+    Also, because the screen doesn't work, it isn't so easy to test...  
+  * Backlight - does not work  
+  * GPU - unknown  
+  * HDMO out - no
+  
+Status / Notification LED - [tested](https://docs.kernel.org/leds/leds-class-multicolor.html) and works from cli  
+Flash - no  
+Torch - no  
+  
+Battery  
+  * Charging - unknown  
+  * Fuel gauge - to read out battery percentage - no  
+  
+Vibration motor - tested and works with fftest  
+Sensors  
+  * Magnetometer - unknown  
+  * Gyroscope & Accelerometer - unknown  
+  * Proximity & Light - unknown  
+  
+Front camera - unknown  
+Rear camera - unknown  
+Camera codecs - no  
+  
+WiFi - working with Fairblobs firmware, need to test newer firmware as well  
+Bluetooth - unknown  
+Modem - unknown  
+NFC - unknown  
+  
+Sound / audio / pcm - no  
+Other things found in old .dts:  
+Ion, iommu, gdsc, rdbg, venus, crypto  
+  
 ## License
 For exact license information, please look at the given sources.
