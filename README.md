@@ -46,6 +46,10 @@ Right now, these driver files are raw, they need license, comment and other info
 They haven't been tested!  
   
 # What works and what doesn't in mainline  
+Parts of the CPU  
+  * IOMMU - this is needed for many things, but there is no suitable driver for it.  
+    For now, for the GPU to work, you need to put this into your kernel cmdline: `msm.vram=192m msm.allow_vram_carveout=1`.  
+  
 Buttons - tested with evtest, no action set for the events  
   
 eMMC internal storage - works  
