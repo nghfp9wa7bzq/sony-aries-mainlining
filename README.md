@@ -91,6 +91,23 @@ NFC - unknown
 Sound / audio / pcm - no  
 Other things found in old .dts:  
 Ion, iommu, gdsc, rdbg, venus, crypto  
+
+# Useful additions to pmbootstrap init (and other commands) for device testing  
+(install additional packages question)  
+hwtest, evtest - you can check input buttons  
+fftest - (this comes with pmos) vibrator test  
+dnsmasq, networkmanager, networkmanager-cli, networkmanager-tui, postmarketos-base-ui, wireless-tools - network and wifi setup and test  
+openssh - allows access through wifi (not sure why I had to install this...)  
+i2c-tools  
+linux-firmware-qcom - for qualcomm devices only  
+xhost - this may be needed to sort authorization issues with xserver  
+plymouth - lightdm was missing this  
+xrandr - (this comes with pmos) display info and test  
+fbgrab - 'screenshot' the framebuffer - at least you know what should be on the screen  
+scrot - take a screenshot - what is on the display, even if you don't see it on the device  
+(The output of this may not match the one from fbgrab, try both.)  
+Copy the whole thing:  
+`hwtest,evtest,dnsmasq,networkmanager,networkmanager-cli,networkmanager-tui,postmarketos-base-ui,wireless-tools,openssh,i2c-tools,linux-firmware-qcom,xhost,plymouth,fbgrab,scrot`  
   
 ## License
 For exact license information, please look at the given sources.
