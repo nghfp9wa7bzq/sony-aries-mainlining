@@ -61,9 +61,9 @@ Display
     * Panel  
   * Touchpad - on my phone this is broken, so I can't test it.  
     Also, because the screen doesn't work, it isn't so easy to test...  
-  * Backlight - does not work  
+  * Backlight - does not work (got it working in my repo)  
   * GPU - unknown  
-  * HDMO out - no
+  * HDMI out - no
   
 Status / Notification LED - [tested](https://docs.kernel.org/leds/leds-class-multicolor.html) and works from cli  
 Flash - no  
@@ -101,6 +101,7 @@ openssh - allows access through wifi (not sure why I had to install this...)
 i2c-tools  
 linux-firmware-qcom - for qualcomm devices only  
 xhost - this may be needed to sort authorization issues with xserver  
+xrandr - see display modes  
 plymouth - lightdm was missing this  
 xrandr - (this comes with pmos) display info and test  
 fbgrab - 'screenshot' the framebuffer - at least you know what should be on the screen  
