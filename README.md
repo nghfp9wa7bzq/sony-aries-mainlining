@@ -94,7 +94,7 @@ Ion, iommu, gdsc, rdbg, venus, crypto
 
 # Useful additions to pmbootstrap init (and other commands) for device testing  
 (install additional packages question)  
-hwtest, evtest - you can check input buttons  
+hwtest, evtest - you can check input buttons (NOTE: 2024.04. python3-3.12.3-r1 breaks hwtest and pmOS build fails...)  
 fftest - (this comes with pmos) vibrator test  
 dnsmasq, networkmanager, networkmanager-cli, networkmanager-tui, postmarketos-base-ui, wireless-tools - network and wifi setup and test  
 openssh - allows access through wifi (not sure why I had to install this...)  
